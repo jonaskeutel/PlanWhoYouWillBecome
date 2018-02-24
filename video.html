@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HumanLearning</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style media="screen">
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: rgb(208,206,206);
+                text-align: center;
+                font-size: 2em;
+                color: white;
+            }
+
+            img {
+                width: 15%;
+                /* margin-left: 42.5%; */
+            }
+
+            video {
+                height: 40vh;
+            }
+
+            .logo {
+                line-height: 15vh;
+                font-size: 5vh;
+                padding: 2.5vh;
+                /* display: flex;
+                justify-content: center; */
+            }
+
+            h2 {
+                text-decoration: underline;
+            }
+
+            .contact {
+                position: absolute;
+                top: 45%;
+                right: 5%;
+                width: 15%;
+                padding: 0.25vh;
+                background-color: rgba(237,125,49,0.8);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                padding: 15px 15px;
+                text-align: left;
+            }
+
+            #contect-button {
+                margin-left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            .video-2 {
+                display: none;
+            }
+
+            .video-2 video {
+                height: 25vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="company">
+            <div class="logo">
+                The
+                <img src="merit.jpg" alt="">
+                presents:
+            </div>
+            <h2>
+                "A day in a life of a recruiter".
+            </h2>
+            <br>
+            <div class="video-1">
+                <video src="recruiter.mp4" controls>
+                </video>
+            </div>
+            <div class="video-2">
+                <video src="recruiter.mp4" controls>
+                </video>
+                <video src="recruiter.mp4" controls>
+                </video>
+            </div>
+
+            <br>
+            <div class="contact">
+                <h2>Interested?</h2>
+                Were we able to arouse your interest? Then let's get into contact and see if we can become colleagues soon.
+                <br>
+                <br>
+                <button type="button" name="button" class="btn btn-success" id="contect-button">Contact us</button>
+            </div>
+
+            <button type="button" name="button" id="vr" class="btn btn-primary">Activate VR-Mode</button>
+        </div>
+
+        <script type="text/javascript">
+            $('#vr').click(function() {
+                $('.video-1').toggle();
+                $('.video-2').toggle();
+                $('video')[0].play();
+                $('video')[1].play();
+                $('video')[2].play();
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HumanLearning</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style media="screen">
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: rgb(208,206,206);
+                text-align: center;
+                font-size: 3em;
+                color: white;
+            }
+
+            img {
+                width: 70%;
+                margin-left: 15%;
+                display: block;
+            }
+
+            .calculating {
+                height: 60%;
+                width: 100%;
+                position: absolute;
+                top: 20%;
+                background-color: #017AD7;
+            }
+
+            #map {
+                display: none;
+                height:80vh;
+                width: 80%;
+                margin-left: 10%;
+                margin-top: 10%;
+            }
+
+            .circle {
+                position: absolute;
+                width: 20vh;
+                height: 20vh;
+                border-radius: 50%;
+                text-align: center;
+                border:solid 2px transparent;
+            }
+
+            .circle:hover {
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                cursor: pointer;
+            }
+
+            #logistics {
+                width: 19.5vh;
+                height: 19.5vh;
+                top: 34.5vh;
+                left: 57.2%;
+                background-color: rgb(112,173,71);
+                padding-top:7vh;
+            }
+            #projectLead{
+                width:12.8vh;
+                height:12.8vh;
+                top:28.6vh;
+                left:81.5%;
+                background-color: rgb(208,102,36);
+                padding-top:3.2vh;
+                font-size:68%;
+            }
+            #salesMarketing{
+                width:15.8vh;
+                height:15.8vh;
+                top:61.6vh;
+                left:72.5%;
+                background-color: rgb(99,126,50);
+                padding-top:4vh;
+                font-size:66%;
+            }
+            #onlineShop{
+                width:10.8vh;
+                height:10.8vh;
+                top:21.8vh;
+                left:44.8%;
+                background-color: rgb(192,0,0);
+                padding-top:4vh;
+                font-size:51%;
+            }
+
+            #recruiting{
+                width:15.6vh;
+                height:15.6vh;
+                top:74.8vh;
+                left:30.4%;
+                background-color: rgb(112,173,71);
+                padding-top:5.5vh;
+                font-size:73%;
+            }
+
+            #customerSupport{
+                width:15.6vh;
+                height:15.6vh;
+                top:40vh;
+                left:23.1%;
+                background-color: rgb(99,126,50);
+                padding-top:4.5vh;
+                font-size:66%;
+            }
+
+            #techSupport{
+                width:15.6vh;
+                height:15.6vh;
+                top:30.5vh;
+                left:17.4%;
+                background-color: rgb(208,102,36);
+                padding-top:6vh;
+                font-size:66%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="circle" id="logistics">
+            Logistics
+        </div>
+        <div class="circle" id="salesMarketing">
+            Sales & Marketing
+        </div>
+        <div class="circle" id="projectLead">
+            Project </br> Lead
+        </div>
+        <div class="circle" id="onlineShop">
+            Onlineshop
+        </div>
+        <div class="circle" id="recruiting">
+            Recruiting
+        </div>
+        <div class="circle" id="customerSupport">
+            Customer Support
+        </div>
+        <div class="circle" id="techSupport">
+            Tech Support
+        </div>
+        <div class="calculating">
+            <img src="loading.gif" alt="">
+            Calculating...
+        </div>
+        <img id="map" src="mapWithoutCircles.PNG" alt="">
+
+        <script type="text/javascript">
+            setTimeout(function() {
+                $('.calculating').hide()
+                $('#map').show();
+            }, 1);
+
+            $('#recruiting').click(function() {window.location = 'video.html'})
+        </script>
+    </body>
+</html>

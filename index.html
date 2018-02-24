@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PlanWhoYouWillBe_come</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style media="screen">
+        body {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: rgb(208,206,206);
+        }
+
+        .questions {
+            position: absolute;
+            top: 20%;
+            height: 100%;
+            width: 100%;
+        }
+
+        #question1 {
+            top: 8vh;
+        }
+
+        #question2 {
+            top: 20vh;
+            height: 16vh;
+        }
+
+        #question3 {
+            top: 38vh;
+            height: 16vh;
+        }
+
+        #question4 {
+            top: 56vh;
+        }
+
+        #question5 {
+            top: 68vh;
+        }
+
+        .question {
+            position: absolute;
+            right: 0;
+            width: 70%;
+            height: 10vh;
+            line-height: 4vh;
+            padding: 0.25vh;
+            background-color: rgba(237,125,49,0.8);
+            display: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            font-size: 1.3em;
+            /* border-radius: 6px; */
+        }
+
+        #logo {
+            position: relative;
+            top: 4vh;
+        }
+
+        .intro {
+            font-size: 1.5em;
+        }
+
+        input {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="logo" src="logo.png" alt="">
+    <div class="questions">
+        <div class="intro">
+            Hi there! Are you looking for a new profession? Let me help you with that.
+        </div>
+        <div id="question1" class="question">
+            <div>
+                What is your current (or was your last) job?
+            </div>
+            <input type="text" name="" value="" placeholder="Current/Last Job">
+        </div>
+        <div id="question2" class="question">
+            <div>
+                We know that you have some great qualifications. Is there anything you want to add?
+            </div>
+            <div class="answers" style="margin-bottom: 1vh;">
+                <button class="btn btn-success" type="button" name="button">Good with people</button>
+                <button class="btn btn-success" type="button" name="button">Logistic overview</button>
+                <button class="btn btn-success" type="button" name="button">Friendly</button>
+                <button class="btn btn-success" type="button" name="button">Resilient</button>
+            </div>
+            <input type="text" id="addQuality" name="" value="" placeholder="Qualification">
+            <button type="button" id="next" name="button">Next</button>
+        </div>
+        <div id="question3" class="question">
+            <div>
+                What are you passionate about? It can be anything, from a to b.
+            </div>
+            <div class="answers" style="margin-bottom: 1vh;">
+            </div>
+            <input type="text" id="addPassion" name="" value="">
+            <button type="button" id="next2" name="button">Next</button>
+        </div>
+        <div id="question4" class="question">
+            <div>
+                Do you want to connect your LinkedIn profile, so that we use your skills and experiences and compare it to others?
+            </div>
+            <div class="answers">
+                <button class="btn btn-success" type="button" name="button">Yes</button>
+                <button class="btn btn-success" type="button" name="button">No</button>
+            </div>
+        </div>
+        <div id="question5" class="question">
+            <div>
+                Great. Now our machine learning algorithm is ready to go. Are you ready to figure out what job could be a good fit for you?
+            </div>
+            <div class="answers">
+                <button class="btn btn-success" type="button" name="button">Let's do it!</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        setTimeout(() => {
+            $('#question1').show();
+            $('#question1').animate({
+                right: '15%'
+            });
+        }, 1000)
+
+        hello = function() {
+            $("#question5").show();
+            $("#question5").animate({
+                right: '15%'
+            });
+        }
+
+        $("#question1 button").click(function() {
+            $("#question2").show();
+            $("#question2").animate({
+                right: '15%'
+            });
+        });
+
+        $("#question1 input").on('keyup', function(e) {
+            if (e.keyCode == 13) {
+                $("#question2").show();
+                $("#question2").animate({
+                    right: '15%'
+                });
+            }
+        });
+
+        // $("#question2 button").click(function(e) {
+        //     if (e.target.value = "Next") {
+        //         return;
+        //     }
+        //     $('#' + e.target.parentElement.parentElement.id + " button").addClass('disabled');
+        //     e.target.classList = e.target.classList.replace('disabled', "active")
+        //     $("#question3").show();
+        //     $("#question3").animate({
+        //         right: '15%'
+        //     });
+        // });
+
+        $("#question3 button").click(function() {
+            $("#question4").show();
+            $("#question4").animate({
+                right: '15%'
+            });
+        });
+
+        $("#next").click(function() {
+            $("#question3").show();
+            $("#question3").animate({
+                right: '15%'
+            });
+        });
+
+        $("#next2").click(function() {
+            $("#question4").show();
+            $("#question4").animate({
+                right: '15%'
+            });
+        });
+
+        $('#addQuality').on('keyup', function(e) {
+            if (e.keyCode == 13) {
+
+                var button = document.createElement('button');
+                button.innerHTML = e.target.value;
+                button.classList = 'btn btn-success';
+                $('#question2 .answers').append(button);
+            }
+        })
+
+        $('#addPassion').on('keyup', function(e) {
+            if (e.keyCode == 13) {
+                var button = document.createElement('button');
+                button.innerHTML = e.target.value;
+                button.classList = 'btn btn-success';
+                $('#question3 .answers').append(button);
+            }
+        })
+
+        $("#question4 button").click(function() {
+            window.open('linkedin.html', 'LinkedIn Authorization', 'resizable,height=400,width=400');
+        });
+
+        $("#question5 button").click(function() {
+            window.location = 'results.html';
+            // alert("Show fancy calculating animation")
+        });
+    </script>
+</body>
+
+</html>
