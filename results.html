@@ -51,6 +51,7 @@
                 border-radius: 50%;
                 text-align: center;
                 border:solid 2px transparent;
+                display: none;
             }
 
             .circle:hover {
@@ -158,8 +159,14 @@
         <script type="text/javascript">
             setTimeout(function() {
                 $('.calculating').hide()
+                $('.circle').show();
                 $('#map').show();
             }, 15000);
+            console.log("Call backend");
+            $.get( "http://localhost:5000/getRecommendations", function( data ) {
+              console.log( "Load was performed:", data );
+            });
+
 
             $('#recruiting').click(function() {window.location = 'video.html'})
         </script>
